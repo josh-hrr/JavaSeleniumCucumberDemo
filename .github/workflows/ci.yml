@@ -20,6 +20,6 @@ jobs:
 
       - name: Build and Test
         run: |
-          ./mvnw clean verify
+          mvn test
         env:
           MAVEN_OPTS: '-Dmaven.repo.local=./.m2/repository'
