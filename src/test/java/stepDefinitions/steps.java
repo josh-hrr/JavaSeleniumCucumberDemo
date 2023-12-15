@@ -33,7 +33,7 @@ public class steps {
 	
 	@After
 	public void tearDown() {
-		
+		driver.quit();
 	}   
 	
 	@Given("I am on the Sauce Demo login page")
