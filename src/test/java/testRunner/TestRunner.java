@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-        features= {"C:\\Users\\Josue\\eclipse-workspace\\cucumberTwoJar\\src\\test\\java\\Features\\TCLogin.feature"},
+        features= {"src/test/java/Features/TCLogin.feature"},
         glue="stepDefinitions",
         plugin= {
         		"pretty", "html:reports/myreport.html", 
