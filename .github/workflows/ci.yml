@@ -1,0 +1,25 @@
+name: Java and Cucumber CI
+
+on: 
+  push:
+    branches: 
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+
+      - name: Build and Test
+        run: |
+          mvn test
+        env:
+          MAVEN_OPTS: '-Dmaven.repo.local=./.m2/repository'
